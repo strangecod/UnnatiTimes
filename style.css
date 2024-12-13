@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* Stack items vertically */
+}
+
+/* Logo styles */
+.logo {
+    position: relative;
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* Add space between logo and navbar */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Default: items stay in one line */
+    margin-top: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Content styles */
+.main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.news-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    overflow: hidden;
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-card .content {
+    padding: 15px;
+}
+
+.news-card h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Media queries for mobile view */
+@media (max-width: 768px) {
+.logo {
+    position: relative;
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+    .navbar {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        justify-content: center; /* Center the navbar items */
+    }
+
+    .navbar a {
+        padding: 8px 10px; /* Reduce padding for mobile */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .news-card {
+        width: calc(50% - 20px); /* Adjust card width */
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-wrap: nowrap; /* Ensure navbar items stay in one line */
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .navbar a {
+        padding: 6px 8px; /* Further reduce padding */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .news-card {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
